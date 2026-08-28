@@ -1,0 +1,1517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Binbin Wu - Research in social homeostasis, behavioral neuroscience, sleep, feeding, circadian biology, genetics, and quantitative behavior.">
+
+    <title>Research | Binbin Wu</title>
+
+
+    <style>
+
+        :root {
+
+            --dark: #17212b;
+            --text: #34424d;
+            --muted: #687680;
+
+            --accent: #245b78;
+            --light-accent: #edf4f7;
+
+            --background: #ffffff;
+            --light: #f6f8f9;
+
+            --border: #dfe5e8;
+
+            --max-width: 1100px;
+
+        }
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            margin: 0;
+
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Helvetica,
+                Arial,
+                sans-serif;
+
+            color: var(--text);
+
+            background: var(--background);
+
+            line-height: 1.7;
+
+        }
+
+
+        a {
+
+            color: var(--accent);
+
+            text-decoration: none;
+
+        }
+
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+
+        .container {
+
+            width: min(92%, var(--max-width));
+
+            margin: auto;
+
+        }
+
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        header {
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 100;
+
+            background:
+                rgba(255, 255, 255, 0.96);
+
+            border-bottom:
+                1px solid var(--border);
+
+            backdrop-filter:
+                blur(8px);
+
+        }
+
+
+        .nav {
+
+            min-height: 70px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+        }
+
+
+        .logo {
+
+            font-size: 1.05rem;
+
+            font-weight: 750;
+
+            letter-spacing: 0.08em;
+
+            color: var(--dark);
+
+        }
+
+
+        .nav-links {
+
+            display: flex;
+
+            gap: 28px;
+
+        }
+
+
+        .nav-links a {
+
+            color: var(--muted);
+
+            font-size: 0.95rem;
+
+        }
+
+
+        .nav-links a:hover {
+
+            color: var(--accent);
+
+            text-decoration: none;
+
+        }
+
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+
+            padding:
+                90px 0 80px;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    #f6f8f9 0%,
+                    #ffffff 100%
+                );
+
+            border-bottom:
+                1px solid var(--border);
+
+        }
+
+
+        .eyebrow {
+
+            color: var(--accent);
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.16em;
+
+            font-size: 0.78rem;
+
+            font-weight: 700;
+
+        }
+
+
+        h1 {
+
+            margin:
+                12px 0 20px;
+
+            font-size:
+                clamp(2.8rem, 6vw, 4.8rem);
+
+            line-height: 1.03;
+
+            letter-spacing: -0.05em;
+
+            color: var(--dark);
+
+        }
+
+
+        .hero-lead {
+
+            max-width: 850px;
+
+            font-size: 1.25rem;
+
+            line-height: 1.8;
+
+            color: var(--text);
+
+            margin: 0;
+
+        }
+
+
+        .hero-concept {
+
+            margin-top: 34px;
+
+            max-width: 850px;
+
+            padding: 24px 28px;
+
+            border-left:
+                4px solid var(--accent);
+
+            background: white;
+
+            border-top:
+                1px solid var(--border);
+
+            border-right:
+                1px solid var(--border);
+
+            border-bottom:
+                1px solid var(--border);
+
+            border-radius:
+                0 10px 10px 0;
+
+        }
+
+
+        .hero-concept strong {
+            color: var(--dark);
+        }
+
+
+
+        /* =========================
+           SECTIONS
+        ========================= */
+
+        section {
+
+            padding:
+                78px 0;
+
+        }
+
+
+        .section-light {
+
+            background:
+                var(--light);
+
+        }
+
+
+        .section-title {
+
+            margin:
+                0 0 12px;
+
+            font-size:
+                2.15rem;
+
+            letter-spacing:
+                -0.025em;
+
+            color:
+                var(--dark);
+
+        }
+
+
+        .section-intro {
+
+            max-width:
+                780px;
+
+            margin:
+                0 0 40px;
+
+            color:
+                var(--muted);
+
+        }
+
+
+
+        /* =========================
+           CENTRAL QUESTIONS
+        ========================= */
+
+        .question-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+
+        }
+
+
+        .question-card {
+
+            padding:
+                26px;
+
+            background:
+                white;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                10px;
+
+        }
+
+
+        .question-number {
+
+            color:
+                var(--accent);
+
+            font-size:
+                0.78rem;
+
+            font-weight:
+                700;
+
+            letter-spacing:
+                0.1em;
+
+        }
+
+
+        .question-card h3 {
+
+            margin:
+                8px 0 10px;
+
+            color:
+                var(--dark);
+
+            font-size:
+                1.1rem;
+
+        }
+
+
+        .question-card p {
+
+            margin:
+                0;
+
+            color:
+                var(--muted);
+
+        }
+
+
+
+        /* =========================
+           RESEARCH DIRECTIONS
+        ========================= */
+
+        .direction {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                110px 1fr;
+
+            gap:
+                30px;
+
+            padding:
+                36px 0;
+
+            border-top:
+                1px solid var(--border);
+
+        }
+
+
+        .direction:first-of-type {
+
+            border-top:
+                none;
+
+            padding-top:
+                0;
+
+        }
+
+
+        .direction-number {
+
+            font-size:
+                2.4rem;
+
+            line-height:
+                1;
+
+            font-weight:
+                750;
+
+            color:
+                var(--accent);
+
+        }
+
+
+        .direction h3 {
+
+            margin:
+                0 0 12px;
+
+            font-size:
+                1.55rem;
+
+            color:
+                var(--dark);
+
+        }
+
+
+        .direction p {
+
+            margin:
+                0 0 15px;
+
+            max-width:
+                800px;
+
+        }
+
+
+        .direction ul {
+
+            margin:
+                12px 0 0;
+
+            padding-left:
+                22px;
+
+            color:
+                var(--muted);
+
+        }
+
+
+        .direction li {
+
+            margin:
+                7px 0;
+
+        }
+
+
+        .highlight {
+
+            margin-top:
+                24px;
+
+            padding:
+                20px 22px;
+
+            background:
+                var(--light-accent);
+
+            border-radius:
+                8px;
+
+            color:
+                var(--text);
+
+        }
+
+
+
+        /* =========================
+           METHODS
+        ========================= */
+
+        .methods-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap:
+                14px;
+
+        }
+
+
+        .method {
+
+            padding:
+                20px;
+
+            background:
+                white;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                9px;
+
+        }
+
+
+        .method strong {
+
+            display:
+                block;
+
+            margin-bottom:
+                5px;
+
+            color:
+                var(--dark);
+
+        }
+
+
+        .method span {
+
+            color:
+                var(--muted);
+
+            font-size:
+                0.9rem;
+
+        }
+
+
+
+        /* =========================
+           FUTURE DIRECTIONS
+        ========================= */
+
+        .future {
+
+            padding:
+                30px;
+
+            background:
+                white;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                12px;
+
+        }
+
+
+        .future h3 {
+
+            margin-top:
+                0;
+
+            color:
+                var(--dark);
+
+        }
+
+
+        .future p {
+
+            margin-bottom:
+                0;
+
+        }
+
+
+
+        /* =========================
+           BUTTONS
+        ========================= */
+
+        .buttons {
+
+            display:
+                flex;
+
+            flex-wrap:
+                wrap;
+
+            gap:
+                12px;
+
+            margin-top:
+                28px;
+
+        }
+
+
+        .button {
+
+            display:
+                inline-block;
+
+            padding:
+                10px 18px;
+
+            border-radius:
+                6px;
+
+            border:
+                1px solid var(--accent);
+
+            font-size:
+                0.92rem;
+
+            font-weight:
+                650;
+
+        }
+
+
+        .button-primary {
+
+            background:
+                var(--accent);
+
+            color:
+                white;
+
+        }
+
+
+        .button-secondary {
+
+            background:
+                white;
+
+            color:
+                var(--accent);
+
+        }
+
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+
+            padding:
+                30px 0;
+
+            border-top:
+                1px solid var(--border);
+
+            color:
+                var(--muted);
+
+            font-size:
+                0.9rem;
+
+        }
+
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            .question-grid {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .methods-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+            }
+
+
+            .direction {
+
+                grid-template-columns:
+                    1fr;
+
+                gap:
+                    12px;
+
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .nav {
+
+                align-items:
+                    flex-start;
+
+                padding:
+                    14px 0;
+
+                gap:
+                    12px;
+
+            }
+
+
+            .nav-links {
+
+                gap:
+                    10px 16px;
+
+                flex-wrap:
+                    wrap;
+
+                justify-content:
+                    flex-end;
+
+            }
+
+
+            .hero {
+
+                padding:
+                    65px 0;
+
+            }
+
+
+            section {
+
+                padding:
+                    58px 0;
+
+            }
+
+
+            .methods-grid {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<header>
+
+    <div class="container nav">
+
+        <a class="logo"
+           href="index.html">
+
+            BINBIN WU
+
+        </a>
+
+
+        <nav class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="research.html">
+                Research
+            </a>
+
+            <a href="publications.html">
+                Publications
+            </a>
+
+            <a href="software.html">
+                Software
+            </a>
+
+            <a href="teaching.html">
+                Teaching
+            </a>
+
+            <a href="cv.html">
+                CV
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<main>
+
+
+<!-- =========================
+     RESEARCH HERO
+========================= -->
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="eyebrow">
+
+            Research Program · Behavioral Neuroscience · Genetics
+
+        </div>
+
+
+        <h1>
+
+            Understanding social need
+            and behavioral homeostasis
+
+        </h1>
+
+
+        <p class="hero-lead">
+
+            My research asks how animals integrate social
+            experience with internal physiological states
+            to generate adaptive behavioral decisions.
+            Using <em>Drosophila</em>, I combine behavioral
+            neuroscience, genetics, quantitative behavioral
+            analysis, and neurobiological approaches to
+            uncover the mechanisms that maintain behavioral
+            and physiological balance.
+
+        </p>
+
+
+        <div class="hero-concept">
+
+            <strong>
+                Central concept — social homeostasis.
+            </strong>
+
+            <br>
+
+            I propose that animals possess a social
+            homeostatic system that integrates social
+            experience to generate an internal state of
+            social need and coordinates behavioral responses
+            to restore social balance.
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CENTRAL QUESTIONS
+========================= -->
+
+<section>
+
+    <div class="container">
+
+        <h2 class="section-title">
+
+            The central questions
+
+        </h2>
+
+
+        <p class="section-intro">
+
+            My research program connects social behavior
+            with broader principles of homeostasis, asking
+            how internal states are generated, sensed,
+            and translated into behavioral actions.
+
+        </p>
+
+
+        <div class="question-grid">
+
+
+            <article class="question-card">
+
+                <div class="question-number">
+
+                    01 · GENERATION
+
+                </div>
+
+
+                <h3>
+
+                    How is social need generated?
+
+                </h3>
+
+
+                <p>
+
+                    How does the nervous system detect
+                    changes in social experience and
+                    transform them into an internal
+                    motivational state?
+
+                </p>
+
+            </article>
+
+
+
+            <article class="question-card">
+
+                <div class="question-number">
+
+                    02 · INTEGRATION
+
+                </div>
+
+
+                <h3>
+
+                    How is social need integrated?
+
+                </h3>
+
+
+                <p>
+
+                    How does social state interact with
+                    sleep, feeding, circadian rhythms,
+                    and other physiological processes?
+
+                </p>
+
+            </article>
+
+
+
+            <article class="question-card">
+
+                <div class="question-number">
+
+                    03 · ACTION
+
+                </div>
+
+
+                <h3>
+
+                    How is behavioral balance restored?
+
+                </h3>
+
+
+                <p>
+
+                    How do neural circuits and molecular
+                    mechanisms coordinate behavioral
+                    responses to changing social conditions?
+
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     RESEARCH DIRECTIONS
+========================= -->
+
+<section class="section-light">
+
+    <div class="container">
+
+        <h2 class="section-title">
+
+            Research directions
+
+        </h2>
+
+
+        <p class="section-intro">
+
+            These directions form an integrated research
+            program rather than isolated projects. Together,
+            they examine how social experience is translated
+            into changes in behavior and physiology.
+
+        </p>
+
+
+
+        <!-- DIRECTION 1 -->
+
+        <article class="direction">
+
+            <div class="direction-number">
+
+                01
+
+            </div>
+
+
+            <div>
+
+                <h3>
+
+                    Social homeostasis and social need
+
+                </h3>
+
+
+                <p>
+
+                    Social interactions provide information
+                    that shapes behavioral decisions and
+                    physiological states throughout life.
+                    My long-term goal is to identify the
+                    neural principles by which social
+                    experience generates social need and
+                    maintains social balance.
+
+                </p>
+
+
+                <ul>
+
+                    <li>
+                        Identify behavioral signatures of
+                        social need and recovery.
+                    </li>
+
+                    <li>
+                        Determine how recent versus prolonged
+                        social experience affects internal state.
+                    </li>
+
+                    <li>
+                        Identify neural circuits and molecular
+                        pathways that sense and regulate
+                        social state.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- DIRECTION 2 -->
+
+        <article class="direction">
+
+            <div class="direction-number">
+
+                02
+
+            </div>
+
+
+            <div>
+
+                <h3>
+
+                    Social interactions, sleep,
+                    and behavioral homeostasis
+
+                </h3>
+
+
+                <p>
+
+                    Sleep provides a powerful model for
+                    testing how social experience interacts
+                    with homeostatic regulation. My work
+                    examines whether social isolation
+                    produces a simple cumulative effect or
+                    whether the timing and recency of social
+                    loss are more important determinants
+                    of sleep.
+
+                </p>
+
+
+                <div class="highlight">
+
+                    <strong>
+                        Recent finding:
+                    </strong>
+
+                    Recent social loss can transiently
+                    reshape sleep, whereas prolonged
+                    isolation does not necessarily produce
+                    a progressive change in sleep. This
+                    suggests that social experience may
+                    modulate the expression of sleep
+                    homeostasis particularly during acute
+                    transitions or elevated sleep pressure.
+
+                </div>
+
+
+                <div class="highlight">
+
+                    <strong>
+                        sociSleep:
+                    </strong>
+
+                    An identity-preserving tracking and
+                    analysis framework that enables
+                    quantitative measurement of sleep and
+                    social interactions within small
+                    groups of <em>Drosophila</em>.
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- DIRECTION 3 -->
+
+        <article class="direction">
+
+            <div class="direction-number">
+
+                03
+
+            </div>
+
+
+            <div>
+
+                <h3>
+
+                    Feeding, circadian rhythms,
+                    and peripheral clocks
+
+                </h3>
+
+
+                <p>
+
+                    I investigate how feeding behavior and
+                    circadian timing interact across neural
+                    and peripheral systems. This work examines
+                    how feeding schedules influence rhythmic
+                    behavior and how specialized gut cells
+                    and peripheral clocks contribute to the
+                    temporal organization of feeding.
+
+                </p>
+
+
+                <ul>
+
+                    <li>
+                        Determine how feeding schedules
+                        entrain behavioral rhythms.
+                    </li>
+
+                    <li>
+                        Define contributions of
+                        enteroendocrine cells and enterocytes
+                        to feeding rhythms.
+                    </li>
+
+                    <li>
+                        Understand how peripheral clocks
+                        respond to prolonged changes in
+                        feeding conditions.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- DIRECTION 4 -->
+
+        <article class="direction">
+
+            <div class="direction-number">
+
+                04
+
+            </div>
+
+
+            <div>
+
+                <h3>
+
+                    Quantitative behavioral neuroscience
+
+                </h3>
+
+
+                <p>
+
+                    Many behavioral phenotypes are dynamic,
+                    individual, and difficult to capture
+                    with conventional assays. I therefore
+                    develop computational approaches that
+                    make complex behavioral states measurable
+                    at high temporal and individual resolution.
+
+                </p>
+
+
+                <ul>
+
+                    <li>
+                        Identity-preserving tracking of
+                        animals in social groups.
+                    </li>
+
+                    <li>
+                        Automated quantification of sleep,
+                        locomotion, proximity, and social
+                        interactions.
+                    </li>
+
+                    <li>
+                        Open and reproducible computational
+                        tools for behavioral research.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     APPROACHES
+========================= -->
+
+<section>
+
+    <div class="container">
+
+        <h2 class="section-title">
+
+            Experimental and computational approaches
+
+        </h2>
+
+
+        <p class="section-intro">
+
+            I integrate complementary approaches to connect
+            behavioral phenotypes with underlying mechanisms.
+
+        </p>
+
+
+        <div class="methods-grid">
+
+
+            <div class="method">
+
+                <strong>
+                    Behavior
+                </strong>
+
+                <span>
+
+                    Social interactions, sleep, feeding,
+                    locomotion, and circadian rhythms
+
+                </span>
+
+            </div>
+
+
+
+            <div class="method">
+
+                <strong>
+                    Quantification
+                </strong>
+
+                <span>
+
+                    Automated tracking, computational
+                    analysis, and behavioral modeling
+
+                </span>
+
+            </div>
+
+
+
+            <div class="method">
+
+                <strong>
+                    Genetics
+                </strong>
+
+                <span>
+
+                    Genetic manipulation and
+                    cell-type-specific approaches
+                    in <em>Drosophila</em>
+
+                </span>
+
+            </div>
+
+
+
+            <div class="method">
+
+                <strong>
+                    Neurobiology
+                </strong>
+
+                <span>
+
+                    Neural circuits, neuronal activity,
+                    and physiological mechanisms
+
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FUTURE PROGRAM
+========================= -->
+
+<section class="section-light">
+
+    <div class="container">
+
+        <div class="future">
+
+            <h2 class="section-title">
+
+                Future research program
+
+            </h2>
+
+
+            <p>
+
+                My future laboratory will use
+                <em>Drosophila</em> to investigate social
+                homeostasis as a general biological principle.
+                By combining quantitative behavioral assays
+                with genetics, neural manipulation, and
+                circuit-level analysis, I aim to determine
+                how social experience is encoded in the
+                nervous system and how social need interacts
+                with other homeostatic drives.
+
+            </p>
+
+
+            <div class="buttons">
+
+                <a
+                    class="button button-primary"
+                    href="publications.html">
+
+                    View publications
+
+                </a>
+
+
+                <a
+                    class="button button-secondary"
+                    href="software.html">
+
+                    Explore software
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="container">
+
+        <strong>
+            Binbin Wu
+        </strong>
+
+        · Behavioral Neuroscience · Genetics
+
+        <br>
+
+        © 2026 Binbin Wu
+
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>
