@@ -1,71 +1,1154 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Binbin Wu | Behavioral Neuroscience</title>
+
+    <meta name="description"
+          content="Binbin Wu - Behavioral Neuroscience, Genetics, Social Behavior, Sleep, Feeding and Circadian Biology">
+
+    <title>Binbin Wu | Behavioral Neuroscience & Genetics</title>
+
+    <style>
+
+        /* =========================
+           GENERAL
+        ========================= */
+
+        :root {
+            --dark: #17212b;
+            --text: #34424d;
+            --muted: #687680;
+            --accent: #245b78;
+            --light-accent: #edf4f7;
+            --background: #ffffff;
+            --light: #f6f8f9;
+            --border: #dfe5e8;
+            --max-width: 1100px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Helvetica,
+                Arial,
+                sans-serif;
+
+            color: var(--text);
+            background: var(--background);
+            line-height: 1.7;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            width: min(92%, var(--max-width));
+            margin: auto;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+
+            background: rgba(255, 255, 255, 0.96);
+            border-bottom: 1px solid var(--border);
+
+            backdrop-filter: blur(8px);
+        }
+
+        .nav {
+            min-height: 70px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.05rem;
+            font-weight: 750;
+            letter-spacing: 0.08em;
+            color: var(--dark);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+        }
+
+        .nav-links a {
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            padding: 100px 0 90px;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    #f6f8f9 0%,
+                    #ffffff 100%
+                );
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.45fr 0.55fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .eyebrow {
+            color: var(--accent);
+
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+
+            font-size: 0.78rem;
+            font-weight: 700;
+        }
+
+        h1 {
+            margin: 12px 0 18px;
+
+            font-size: clamp(3.2rem, 7vw, 5.5rem);
+            line-height: 1;
+            letter-spacing: -0.05em;
+
+            color: var(--dark);
+        }
+
+        .hero-title {
+            margin-bottom: 25px;
+
+            font-size: 1.35rem;
+            font-weight: 500;
+
+            color: var(--muted);
+        }
+
+        .hero-description {
+            max-width: 760px;
+
+            font-size: 1.12rem;
+            line-height: 1.8;
+
+            color: var(--text);
+        }
+
+
+        /* =========================
+           PHOTO PLACEHOLDER
+        ========================= */
+
+        .photo-placeholder {
+
+            width: 230px;
+            height: 230px;
+
+            margin: auto;
+
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            background: #e2e9ed;
+
+            border: 8px solid white;
+
+            box-shadow:
+                0 10px 30px rgba(20, 40, 55, 0.12);
+
+            color: var(--muted);
+
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+
+        /* =========================
+           BUTTONS
+        ========================= */
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+
+            gap: 12px;
+
+            margin-top: 30px;
+        }
+
+        .button {
+
+            display: inline-block;
+
+            padding: 10px 18px;
+
+            border-radius: 6px;
+
+            border: 1px solid var(--accent);
+
+            font-size: 0.92rem;
+
+            font-weight: 650;
+        }
+
+        .button-primary {
+            background: var(--accent);
+            color: white;
+        }
+
+        .button-secondary {
+            background: white;
+            color: var(--accent);
+        }
+
+
+        /* =========================
+           SECTIONS
+        ========================= */
+
+        section {
+            padding: 75px 0;
+        }
+
+        .section-light {
+            background: var(--light);
+        }
+
+        .section-title {
+
+            margin: 0 0 12px;
+
+            font-size: 2rem;
+
+            letter-spacing: -0.02em;
+
+            color: var(--dark);
+        }
+
+        .section-intro {
+
+            max-width: 760px;
+
+            margin: 0 0 38px;
+
+            color: var(--muted);
+        }
+
+
+        /* =========================
+           RESEARCH CARDS
+        ========================= */
+
+        .research-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 20px;
+        }
+
+        .research-card {
+
+            padding: 28px;
+
+            background: white;
+
+            border: 1px solid var(--border);
+
+            border-radius: 10px;
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+        .research-card:hover {
+
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 10px 25px rgba(20, 40, 55, 0.08);
+        }
+
+        .research-number {
+
+            color: var(--accent);
+
+            font-size: 0.8rem;
+
+            font-weight: 700;
+
+            letter-spacing: 0.1em;
+        }
+
+        .research-card h3 {
+
+            margin: 8px 0 10px;
+
+            color: var(--dark);
+
+            font-size: 1.2rem;
+        }
+
+        .research-card p {
+
+            margin: 0;
+
+            color: var(--muted);
+        }
+
+
+        /* =========================
+           PUBLICATIONS
+        ========================= */
+
+        .publication {
+
+            padding: 22px 0;
+
+            border-top: 1px solid var(--border);
+        }
+
+        .publication:first-child {
+            border-top: none;
+        }
+
+        .publication-year {
+
+            color: var(--accent);
+
+            font-weight: 700;
+
+            font-size: 0.9rem;
+        }
+
+        .publication-title {
+
+            margin-top: 4px;
+
+            color: var(--dark);
+
+            font-weight: 700;
+        }
+
+        .publication-links {
+
+            margin-top: 7px;
+
+            font-size: 0.9rem;
+        }
+
+        .publication-links a {
+
+            margin-right: 18px;
+        }
+
+
+        /* =========================
+           SOFTWARE
+        ========================= */
+
+        .software-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 20px;
+        }
+
+        .software-card {
+
+            padding: 28px;
+
+            border: 1px solid var(--border);
+
+            border-radius: 10px;
+
+            background: white;
+        }
+
+        .software-card h3 {
+
+            margin-top: 0;
+
+            color: var(--dark);
+        }
+
+        .software-card p {
+
+            color: var(--muted);
+        }
+
+        .tag {
+
+            display: inline-block;
+
+            margin: 3px 5px 3px 0;
+
+            padding: 3px 9px;
+
+            border-radius: 20px;
+
+            background: var(--light-accent);
+
+            color: var(--accent);
+
+            font-size: 0.78rem;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact-box {
+
+            padding: 32px;
+
+            border-radius: 12px;
+
+            background: var(--light);
+
+            border: 1px solid var(--border);
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+
+            padding: 30px 0;
+
+            border-top: 1px solid var(--border);
+
+            color: var(--muted);
+
+            font-size: 0.9rem;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 760px) {
+
+            .nav-links {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+            }
+
+            .hero {
+                padding: 60px 0;
+            }
+
+            .hero-grid {
+
+                grid-template-columns: 1fr;
+
+                gap: 45px;
+            }
+
+            .photo-placeholder {
+
+                width: 190px;
+                height: 190px;
+            }
+
+            .research-grid,
+            .software-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+            section {
+
+                padding: 55px 0;
+            }
+        }
+
+    </style>
 </head>
+
 
 <body>
 
-    <h1>Binbin Wu</h1>
 
-    <h2>Behavioral Neuroscience · Genetics · Quantitative Behavior</h2>
+<!-- =========================
+     NAVIGATION
+========================= -->
 
-    <p>
-        I study how social experience shapes behavioral and physiological states,
-        using Drosophila to investigate social behavior, sleep, feeding,
-        and circadian rhythms.
-    </p>
+<header>
 
-    <h2>Research</h2>
+    <div class="container nav">
 
-    <p>
-        My research combines behavioral analysis, genetics, neurobiology,
-        and computational approaches to understand the mechanisms underlying
-        animal behavior.
-    </p>
+        <a class="logo" href="index.html">
+            BINBIN WU
+        </a>
 
-    <h2>Research Areas</h2>
+        <nav class="nav-links">
 
-    <ul>
-        <li>Social Homeostasis</li>
-        <li>Social Interactions and Sleep</li>
-        <li>Circadian Biology and Feeding</li>
-        <li>Quantitative Behavioral Analysis</li>
-    </ul>
+            <a href="index.html">Home</a>
 
-    <h2>Publications</h2>
+            <a href="research.html">
+                Research
+            </a>
 
-    <p>
-        <a href="publications.html">View publications →</a>
-    </p>
+            <a href="publications.html">
+                Publications
+            </a>
 
-    <h2>Open Software</h2>
+            <a href="software.html">
+                Software
+            </a>
 
-    <p>
-        <a href="software.html">View software and tools →</a>
-    </p>
+            <a href="teaching.html">
+                Teaching
+            </a>
 
-    <h2>CV</h2>
+            <a href="cv.html">
+                CV
+            </a>
 
-    <p>
-        <a href="cv.html">View CV →</a>
-    </p>
+        </nav>
 
-    <h2>Contact</h2>
+    </div>
 
-    <p>
-        Email: YOUR_EMAIL@example.com
-    </p>
+</header>
 
-    <p>
-        <a href="https://github.com/Dr-WUBINBIN">GitHub</a>
-        ·
-        <a href="#">Google Scholar</a>
-        ·
-        <a href="#">ORCID</a>
-    </p>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<main>
+
+<section class="hero">
+
+    <div class="container hero-grid">
+
+        <div>
+
+            <div class="eyebrow">
+
+                Behavioral Neuroscience · Genetics · Quantitative Behavior
+
+            </div>
+
+
+            <h1>
+                Binbin Wu
+            </h1>
+
+
+            <div class="hero-title">
+
+                Postdoctoral Associate · The Wertheim UF Scripps Institute
+
+            </div>
+
+
+            <p class="hero-description">
+
+                My research investigates how social experience shapes
+                behavioral and physiological states. Using
+                <em>Drosophila</em>, I combine behavioral analysis,
+                genetics, neurobiology, and computational approaches
+                to uncover mechanisms underlying social need, sleep,
+                feeding, and circadian rhythms.
+
+            </p>
+
+
+            <div class="buttons">
+
+                <a
+                    class="button button-primary"
+                    href="research.html">
+                    Explore my research
+                </a>
+
+
+                <a
+                    class="button button-secondary"
+                    href="cv.html">
+                    View CV
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div>
+
+            <div class="photo-placeholder">
+
+                YOUR<br>
+                PHOTO<br>
+                HERE
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     RESEARCH
+========================= -->
+
+<section>
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Research at a glance
+        </h2>
+
+
+        <p class="section-intro">
+
+            I study how animals integrate social experience,
+            internal physiological states, and environmental
+            information to guide behavior.
+
+        </p>
+
+
+        <div class="research-grid">
+
+
+            <article class="research-card">
+
+                <div class="research-number">
+                    01
+                </div>
+
+                <h3>
+                    Social Homeostasis
+                </h3>
+
+                <p>
+
+                    How does the nervous system detect social need,
+                    represent social experience, and coordinate
+                    behavioral responses?
+
+                </p>
+
+            </article>
+
+
+
+            <article class="research-card">
+
+                <div class="research-number">
+                    02
+                </div>
+
+                <h3>
+                    Social Interactions & Sleep
+                </h3>
+
+                <p>
+
+                    How does recent social experience influence sleep,
+                    sleep pressure, and the expression of sleep
+                    homeostasis?
+
+                </p>
+
+            </article>
+
+
+
+            <article class="research-card">
+
+                <div class="research-number">
+                    03
+                </div>
+
+                <h3>
+                    Circadian Biology & Feeding
+                </h3>
+
+                <p>
+
+                    How do neural and peripheral clocks coordinate
+                    feeding behavior and respond to changes in
+                    feeding schedules?
+
+                </p>
+
+            </article>
+
+
+
+            <article class="research-card">
+
+                <div class="research-number">
+                    04
+                </div>
+
+                <h3>
+                    Quantitative Behavioral Tools
+                </h3>
+
+                <p>
+
+                    How can automated tracking and computational
+                    approaches reveal previously inaccessible
+                    dimensions of animal behavior?
+
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     SELECTED PUBLICATIONS
+========================= -->
+
+<section class="section-light">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Selected publications
+        </h2>
+
+
+        <p class="section-intro">
+
+            Selected publications and preprints highlighting
+            my research program.
+
+        </p>
+
+
+
+        <div class="publication">
+
+            <div class="publication-year">
+                2026 · Preprint
+            </div>
+
+            <div class="publication-title">
+
+                Recent social loss, not chronic isolation,
+                reshapes Drosophila sleep.
+
+            </div>
+
+            <div class="publication-links">
+
+                <a href="#">
+                    Preprint
+                </a>
+
+                <a href="#">
+                    Code
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="publication">
+
+            <div class="publication-year">
+                2026 · Preprint
+            </div>
+
+            <div class="publication-title">
+
+                [Your 2026 feeding/circadian preprint title]
+
+            </div>
+
+            <div class="publication-links">
+
+                <a href="#">
+                    Preprint
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="publication">
+
+            <div class="publication-year">
+                2025 · Communications Biology
+            </div>
+
+            <div class="publication-title">
+
+                [Your 2025 publication title]
+
+            </div>
+
+            <div class="publication-links">
+
+                <a href="#">
+                    Paper
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="publication">
+
+            <div class="publication-year">
+                2023 · Cell Reports
+            </div>
+
+            <div class="publication-title">
+
+                [Your 2023 publication title]
+
+            </div>
+
+            <div class="publication-links">
+
+                <a href="#">
+                    Paper
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="buttons">
+
+            <a
+                class="button button-primary"
+                href="publications.html">
+
+                View all publications →
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     SOFTWARE
+========================= -->
+
+<section>
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Open science & software
+        </h2>
+
+
+        <p class="section-intro">
+
+            I develop open computational tools for quantitative
+            behavioral analysis and reproducible research.
+
+        </p>
+
+
+        <div class="software-grid">
+
+
+            <article class="software-card">
+
+                <h3>
+                    sociSleep
+                </h3>
+
+                <p>
+
+                    An identity-preserving tracking and analysis
+                    system for quantifying sleep and social
+                    interactions in small groups of
+                    <em>Drosophila</em>.
+
+                </p>
+
+
+                <div>
+
+                    <span class="tag">
+                        Python
+                    </span>
+
+                    <span class="tag">
+                        Behavior tracking
+                    </span>
+
+                    <span class="tag">
+                        Sleep
+                    </span>
+
+                    <span class="tag">
+                        Open source
+                    </span>
+
+                </div>
+
+
+                <p>
+
+                    <a href="https://github.com/Dr-WUBINBIN">
+
+                        GitHub repository →
+
+                    </a>
+
+                </p>
+
+            </article>
+
+
+
+            <article class="software-card">
+
+                <h3>
+                    easyClock
+                </h3>
+
+                <p>
+
+                    A user-friendly computational tool for
+                    analyzing and visualizing circadian
+                    behavioral rhythms.
+
+                </p>
+
+
+                <div>
+
+                    <span class="tag">
+                        Python
+                    </span>
+
+                    <span class="tag">
+                        Circadian
+                    </span>
+
+                    <span class="tag">
+                        GUI
+                    </span>
+
+                </div>
+
+
+                <p>
+
+                    <a href="https://github.com/Dr-WUBINBIN">
+
+                        GitHub repository →
+
+                    </a>
+
+                </p>
+
+            </article>
+
+
+        </div>
+
+
+        <div class="buttons">
+
+            <a
+                class="button button-secondary"
+                href="software.html">
+
+                View software →
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section class="section-light">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Contact
+        </h2>
+
+
+        <div class="contact-box">
+
+            <p>
+
+                <strong>
+                    Binbin Wu
+                </strong>
+
+            </p>
+
+
+            <p>
+
+                Postdoctoral Associate<br>
+
+                The Wertheim UF Scripps Institute
+
+            </p>
+
+
+            <p>
+
+                Email:
+                <a href="mailto:YOUR_EMAIL@example.com">
+
+                    YOUR_EMAIL@example.com
+
+                </a>
+
+            </p>
+
+
+            <p>
+
+                <a href="#">
+                    Google Scholar
+                </a>
+
+                ·
+
+                <a href="#">
+                    ORCID
+                </a>
+
+                ·
+
+                <a href="https://github.com/Dr-WUBINBIN">
+                    GitHub
+                </a>
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="container">
+
+        <strong>
+            Binbin Wu
+        </strong>
+
+        · Behavioral Neuroscience · Genetics
+
+        <br>
+
+        © 2026 Binbin Wu
+
+    </div>
+
+</footer>
+
 
 </body>
+
 </html>
