@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Binbin Wu - Selected publications in behavioral neuroscience, social behavior, sleep, feeding, circadian biology, and genetics.">
+
+    <title>Publications | Binbin Wu</title>
+
+
+    <style>
+
+        :root {
+
+            --dark: #17212b;
+            --text: #34424d;
+            --muted: #687680;
+
+            --accent: #245b78;
+            --light-accent: #edf4f7;
+
+            --background: #ffffff;
+            --light: #f6f8f9;
+
+            --border: #dfe5e8;
+
+            --max-width: 1100px;
+
+        }
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            margin: 0;
+
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Helvetica,
+                Arial,
+                sans-serif;
+
+            color: var(--text);
+
+            background: var(--background);
+
+            line-height: 1.7;
+
+        }
+
+
+        a {
+
+            color: var(--accent);
+
+            text-decoration: none;
+
+        }
+
+
+        a:hover {
+
+            text-decoration: underline;
+
+        }
+
+
+        .container {
+
+            width:
+                min(92%, var(--max-width));
+
+            margin:
+                auto;
+
+        }
+
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        header {
+
+            position:
+                sticky;
+
+            top:
+                0;
+
+            z-index:
+                100;
+
+            background:
+                rgba(255, 255, 255, 0.96);
+
+            border-bottom:
+                1px solid var(--border);
+
+            backdrop-filter:
+                blur(8px);
+
+        }
+
+
+        .nav {
+
+            min-height:
+                70px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                space-between;
+
+        }
+
+
+        .logo {
+
+            font-size:
+                1.05rem;
+
+            font-weight:
+                750;
+
+            letter-spacing:
+                0.08em;
+
+            color:
+                var(--dark);
+
+        }
+
+
+        .nav-links {
+
+            display:
+                flex;
+
+            gap:
+                28px;
+
+        }
+
+
+        .nav-links a {
+
+            color:
+                var(--muted);
+
+            font-size:
+                0.95rem;
+
+        }
+
+
+        .nav-links a:hover {
+
+            color:
+                var(--accent);
+
+            text-decoration:
+                none;
+
+        }
+
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .page-hero {
+
+            padding:
+                90px 0 75px;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    #f6f8f9 0%,
+                    #ffffff 100%
+                );
+
+            border-bottom:
+                1px solid var(--border);
+
+        }
+
+
+        .eyebrow {
+
+            color:
+                var(--accent);
+
+            text-transform:
+                uppercase;
+
+            letter-spacing:
+                0.16em;
+
+            font-size:
+                0.78rem;
+
+            font-weight:
+                700;
+
+        }
+
+
+        h1 {
+
+            margin:
+                12px 0 20px;
+
+            font-size:
+                clamp(2.8rem, 6vw, 4.8rem);
+
+            line-height:
+                1.03;
+
+            letter-spacing:
+                -0.05em;
+
+            color:
+                var(--dark);
+
+        }
+
+
+        .page-lead {
+
+            max-width:
+                800px;
+
+            font-size:
+                1.2rem;
+
+            line-height:
+                1.8;
+
+            color:
+                var(--text);
+
+            margin:
+                0;
+
+        }
+
+
+
+        /* =========================
+           SECTIONS
+        ========================= */
+
+        section {
+
+            padding:
+                75px 0;
+
+        }
+
+
+        .section-light {
+
+            background:
+                var(--light);
+
+        }
+
+
+        .section-title {
+
+            margin:
+                0 0 12px;
+
+            font-size:
+                2.1rem;
+
+            letter-spacing:
+                -0.025em;
+
+            color:
+                var(--dark);
+
+        }
+
+
+        .section-intro {
+
+            max-width:
+                760px;
+
+            margin:
+                0 0 40px;
+
+            color:
+                var(--muted);
+
+        }
+
+
+
+        /* =========================
+           PUBLICATIONS
+        ========================= */
+
+        .publication-list {
+
+            border-top:
+                1px solid var(--border);
+
+        }
+
+
+        .publication {
+
+            padding:
+                32px 0;
+
+            border-bottom:
+                1px solid var(--border);
+
+        }
+
+
+        .publication-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                95px 1fr;
+
+            gap:
+                28px;
+
+        }
+
+
+        .publication-year {
+
+            color:
+                var(--accent);
+
+            font-size:
+                1rem;
+
+            font-weight:
+                750;
+
+        }
+
+
+        .publication-type {
+
+            display:
+                inline-block;
+
+            margin-top:
+                8px;
+
+            padding:
+                3px 9px;
+
+            border-radius:
+                20px;
+
+            background:
+                var(--light-accent);
+
+            color:
+                var(--accent);
+
+            font-size:
+                0.7rem;
+
+            font-weight:
+                700;
+
+            text-transform:
+                uppercase;
+
+            letter-spacing:
+                0.04em;
+
+        }
+
+
+        .publication-title {
+
+            margin:
+                0 0 8px;
+
+            font-size:
+                1.2rem;
+
+            line-height:
+                1.5;
+
+            font-weight:
+                700;
+
+            color:
+                var(--dark);
+
+        }
+
+
+        .publication-authors {
+
+            margin:
+                0 0 6px;
+
+            color:
+                var(--text);
+
+        }
+
+
+        .publication-journal {
+
+            margin:
+                0;
+
+            color:
+                var(--muted);
+
+            font-style:
+                italic;
+
+        }
+
+
+        .publication-links {
+
+            display:
+                flex;
+
+            flex-wrap:
+                wrap;
+
+            gap:
+                10px;
+
+            margin-top:
+                15px;
+
+        }
+
+
+        .publication-link {
+
+            display:
+                inline-block;
+
+            padding:
+                6px 13px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                5px;
+
+            background:
+                white;
+
+            font-size:
+                0.85rem;
+
+            font-weight:
+                650;
+
+        }
+
+
+        .publication-link:hover {
+
+            border-color:
+                var(--accent);
+
+            text-decoration:
+                none;
+
+        }
+
+
+
+        /* =========================
+           COMPLETE RECORD
+        ========================= */
+
+        .record-box {
+
+            padding:
+                35px;
+
+            background:
+                white;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                12px;
+
+        }
+
+
+        .record-box h2 {
+
+            margin-top:
+                0;
+
+            color:
+                var(--dark);
+
+        }
+
+
+        .record-box p {
+
+            max-width:
+                720px;
+
+            color:
+                var(--muted);
+
+        }
+
+
+        .profile-links {
+
+            display:
+                flex;
+
+            flex-wrap:
+                wrap;
+
+            gap:
+                12px;
+
+            margin-top:
+                25px;
+
+        }
+
+
+        .profile-button {
+
+            display:
+                inline-block;
+
+            padding:
+                11px 18px;
+
+            border:
+                1px solid var(--accent);
+
+            border-radius:
+                6px;
+
+            font-weight:
+                650;
+
+            font-size:
+                0.92rem;
+
+        }
+
+
+        .profile-button.primary {
+
+            background:
+                var(--accent);
+
+            color:
+                white;
+
+        }
+
+
+        .profile-button.secondary {
+
+            background:
+                white;
+
+            color:
+                var(--accent);
+
+        }
+
+
+
+        /* =========================
+           NOTE
+        ========================= */
+
+        .note {
+
+            margin-top:
+                35px;
+
+            padding:
+                18px 20px;
+
+            border-left:
+                4px solid var(--accent);
+
+            background:
+                var(--light-accent);
+
+            border-radius:
+                0 8px 8px 0;
+
+            color:
+                var(--text);
+
+        }
+
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+
+            padding:
+                30px 0;
+
+            border-top:
+                1px solid var(--border);
+
+            color:
+                var(--muted);
+
+            font-size:
+                0.9rem;
+
+        }
+
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 760px) {
+
+            .nav {
+
+                align-items:
+                    flex-start;
+
+                padding:
+                    14px 0;
+
+                gap:
+                    12px;
+
+            }
+
+
+            .nav-links {
+
+                gap:
+                    10px 16px;
+
+                flex-wrap:
+                    wrap;
+
+                justify-content:
+                    flex-end;
+
+            }
+
+
+            .page-hero {
+
+                padding:
+                    60px 0;
+
+            }
+
+
+            section {
+
+                padding:
+                    55px 0;
+
+            }
+
+
+            .publication-grid {
+
+                grid-template-columns:
+                    1fr;
+
+                gap:
+                    8px;
+
+            }
+
+
+            .record-box {
+
+                padding:
+                    25px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<header>
+
+    <div class="container nav">
+
+        <a class="logo"
+           href="index.html">
+
+            BINBIN WU
+
+        </a>
+
+
+        <nav class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="research.html">
+                Research
+            </a>
+
+            <a href="publications.html">
+                Publications
+            </a>
+
+            <a href="software.html">
+                Software
+            </a>
+
+            <a href="teaching.html">
+                Teaching
+            </a>
+
+            <a href="cv.html">
+                CV
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<main>
+
+
+<!-- =========================
+     PAGE HERO
+========================= -->
+
+<section class="page-hero">
+
+    <div class="container">
+
+        <div class="eyebrow">
+
+            Publications · Selected Work
+
+        </div>
+
+
+        <h1>
+
+            Publications
+
+        </h1>
+
+
+        <p class="page-lead">
+
+            Selected publications and preprints representing
+            my research in social behavior, sleep, feeding,
+            circadian biology, and quantitative behavioral
+            neuroscience.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     SELECTED PUBLICATIONS
+========================= -->
+
+<section>
+
+    <div class="container">
+
+        <h2 class="section-title">
+
+            Selected publications
+
+        </h2>
+
+
+        <p class="section-intro">
+
+            Five representative publications highlighting
+            different components of my research program.
+
+        </p>
+
+
+        <div class="publication-list">
+
+
+            <!-- =====================
+                 PAPER 1
+            ====================== -->
+
+            <article class="publication">
+
+                <div class="publication-grid">
+
+
+                    <div>
+
+                        <div class="publication-year">
+                            2026
+                        </div>
+
+                        <div class="publication-type">
+                            Preprint
+                        </div>
+
+                    </div>
+
+
+                    <div>
+
+                        <h3 class="publication-title">
+
+                            Recent social loss, not chronic
+                            isolation, reshapes
+                            <em>Drosophila</em> sleep.
+
+                        </h3>
+
+
+                        <p class="publication-authors">
+
+                            Binbin Wu, et al.
+
+                        </p>
+
+
+                        <p class="publication-journal">
+
+                            bioRxiv
+
+                        </p>
+
+
+                        <div class="publication-links">
+
+                            <a class="publication-link"
+                               href="#">
+
+                                Preprint
+
+                            </a>
+
+
+                            <a class="publication-link"
+                               href="#">
+
+                                Code
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =====================
+                 PAPER 2
+            ====================== -->
+
+            <article class="publication">
+
+                <div class="publication-grid">
+
+
+                    <div>
+
+                        <div class="publication-year">
+                            2026
+                        </div>
+
+                        <div class="publication-type">
+                            Preprint
+                        </div>
+
+                    </div>
+
+
+                    <div>
+
+                        <h3 class="publication-title">
+
+                            [Your 2026 feeding/circadian
+                            preprint title]
+
+                        </h3>
+
+
+                        <p class="publication-authors">
+
+                            Binbin Wu, et al.
+
+                        </p>
+
+
+                        <p class="publication-journal">
+
+                            Preprint
+
+                        </p>
+
+
+                        <div class="publication-links">
+
+                            <a class="publication-link"
+                               href="#">
+
+                                Preprint
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =====================
+                 PAPER 3
+            ====================== -->
+
+            <article class="publication">
+
+                <div class="publication-grid">
+
+
+                    <div>
+
+                        <div class="publication-year">
+                            2025
+                        </div>
+
+                        <div class="publication-type">
+                            Research Article
+                        </div>
+
+                    </div>
+
+
+                    <div>
+
+                        <h3 class="publication-title">
+
+                            [Your 2025 Communications Biology
+                            publication title]
+
+                        </h3>
+
+
+                        <p class="publication-authors">
+
+                            Binbin Wu, et al.
+
+                        </p>
+
+
+                        <p class="publication-journal">
+
+                            <em>Communications Biology</em>
+
+                        </p>
+
+
+                        <div class="publication-links">
+
+                            <a class="publication-link"
+                               href="#">
+
+                                Paper
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =====================
+                 PAPER 4
+            ====================== -->
+
+            <article class="publication">
+
+                <div class="publication-grid">
+
+
+                    <div>
+
+                        <div class="publication-year">
+                            2023
+                        </div>
+
+                        <div class="publication-type">
+                            Research Article
+                        </div>
+
+                    </div>
+
+
+                    <div>
+
+                        <h3 class="publication-title">
+
+                            [Your 2023 Cell Reports
+                            publication title]
+
+                        </h3>
+
+
+                        <p class="publication-authors">
+
+                            Binbin Wu, et al.
+
+                        </p>
+
+
+                        <p class="publication-journal">
+
+                            <em>Cell Reports</em>
+
+                        </p>
+
+
+                        <div class="publication-links">
+
+                            <a class="publication-link"
+                               href="#">
+
+                                Paper
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =====================
+                 PAPER 5
+            ====================== -->
+
+            <article class="publication">
+
+                <div class="publication-grid">
+
+
+                    <div>
+
+                        <div class="publication-year">
+                            2023
+                        </div>
+
+                        <div class="publication-type">
+                            Selected Work
+                        </div>
+
+                    </div>
+
+
+                    <div>
+
+                        <h3 class="publication-title">
+
+                            [Add a fifth representative
+                            publication]
+
+                        </h3>
+
+
+                        <p class="publication-authors">
+
+                            Binbin Wu, et al.
+
+                        </p>
+
+
+                        <p class="publication-journal">
+
+                            [Journal]
+
+                        </p>
+
+
+                        <div class="publication-links">
+
+                            <a class="publication-link"
+                               href="#">
+
+                                Paper
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+        <div class="note">
+
+            <strong>
+                Complete publication record:
+            </strong>
+
+            For a complete and up-to-date list of my
+            publications, please visit my ORCID profile.
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     ORCID
+========================= -->
+
+<section class="section-light">
+
+    <div class="container">
+
+        <div class="record-box">
+
+            <h2 class="section-title">
+
+                Complete publication record
+
+            </h2>
+
+
+            <p>
+
+                My ORCID profile provides a complete,
+                continuously updated record of my
+                publications and research outputs.
+
+            </p>
+
+
+            <div class="profile-links">
+
+
+                <a
+                    class="profile-button primary"
+                    href="https://orcid.org/0000-0002-0879-4904"
+                    target="_blank"
+                    rel="noopener">
+
+                    View my ORCID profile →
+
+                </a>
+
+
+                <!--
+                Add your Google Scholar profile here
+                when you are ready.
+
+                Example:
+
+                <a
+                    class="profile-button secondary"
+                    href="YOUR_GOOGLE_SCHOLAR_URL"
+                    target="_blank"
+                    rel="noopener">
+
+                    Google Scholar →
+
+                </a>
+                -->
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="container">
+
+        <strong>
+            Binbin Wu
+        </strong>
+
+        · Behavioral Neuroscience · Genetics
+
+        <br>
+
+        © 2026 Binbin Wu
+
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>
