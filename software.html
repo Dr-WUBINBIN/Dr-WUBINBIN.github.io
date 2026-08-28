@@ -1,0 +1,1622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Binbin Wu - Open-source software for behavioral neuroscience, quantitative behavior, sleep, circadian biology, and data analysis.">
+
+    <title>Software | Binbin Wu</title>
+
+
+    <style>
+
+        :root {
+
+            --dark: #17212b;
+            --text: #34424d;
+            --muted: #687680;
+
+            --accent: #245b78;
+            --light-accent: #edf4f7;
+
+            --background: #ffffff;
+            --light: #f6f8f9;
+
+            --border: #dfe5e8;
+
+            --max-width: 1100px;
+
+        }
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            margin: 0;
+
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Helvetica,
+                Arial,
+                sans-serif;
+
+            color: var(--text);
+
+            background: var(--background);
+
+            line-height: 1.7;
+
+        }
+
+
+        a {
+
+            color: var(--accent);
+
+            text-decoration: none;
+
+        }
+
+
+        a:hover {
+
+            text-decoration: underline;
+
+        }
+
+
+        .container {
+
+            width:
+                min(92%, var(--max-width));
+
+            margin:
+                auto;
+
+        }
+
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        header {
+
+            position:
+                sticky;
+
+            top:
+                0;
+
+            z-index:
+                100;
+
+            background:
+                rgba(255,255,255,0.96);
+
+            border-bottom:
+                1px solid var(--border);
+
+            backdrop-filter:
+                blur(8px);
+
+        }
+
+
+        .nav {
+
+            min-height:
+                70px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                space-between;
+
+        }
+
+
+        .logo {
+
+            font-size:
+                1.05rem;
+
+            font-weight:
+                750;
+
+            letter-spacing:
+                0.08em;
+
+            color:
+                var(--dark);
+
+        }
+
+
+        .nav-links {
+
+            display:
+                flex;
+
+            gap:
+                28px;
+
+        }
+
+
+        .nav-links a {
+
+            color:
+                var(--muted);
+
+            font-size:
+                0.95rem;
+
+        }
+
+
+        .nav-links a:hover {
+
+            color:
+                var(--accent);
+
+            text-decoration:
+                none;
+
+        }
+
+
+
+        /* =========================
+           PAGE HERO
+        ========================= */
+
+        .page-hero {
+
+            padding:
+                90px 0 75px;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    #f6f8f9 0%,
+                    #ffffff 100%
+                );
+
+            border-bottom:
+                1px solid var(--border);
+
+        }
+
+
+        .eyebrow {
+
+            color:
+                var(--accent);
+
+            text-transform:
+                uppercase;
+
+            letter-spacing:
+                0.16em;
+
+            font-size:
+                0.78rem;
+
+            font-weight:
+                700;
+
+        }
+
+
+        h1 {
+
+            margin:
+                12px 0 20px;
+
+            font-size:
+                clamp(2.8rem, 6vw, 4.8rem);
+
+            line-height:
+                1.03;
+
+            letter-spacing:
+                -0.05em;
+
+            color:
+                var(--dark);
+
+        }
+
+
+        .page-lead {
+
+            max-width:
+                800px;
+
+            font-size:
+                1.2rem;
+
+            line-height:
+                1.8;
+
+            color:
+                var(--text);
+
+            margin:
+                0;
+
+        }
+
+
+
+        /* =========================
+           SOFTWARE SECTION
+        ========================= */
+
+        section {
+
+            padding:
+                75px 0;
+
+        }
+
+
+        .section-light {
+
+            background:
+                var(--light);
+
+        }
+
+
+        .section-title {
+
+            margin:
+                0 0 12px;
+
+            font-size:
+                2.1rem;
+
+            letter-spacing:
+                -0.025em;
+
+            color:
+                var(--dark);
+
+        }
+
+
+        .section-intro {
+
+            max-width:
+                760px;
+
+            margin:
+                0 0 40px;
+
+            color:
+                var(--muted);
+
+        }
+
+
+
+        /* =========================
+           SOFTWARE PROJECT
+        ========================= */
+
+        .software-list {
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+        }
+
+
+        .software-item {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap:
+                45px;
+
+            align-items:
+                center;
+
+            padding:
+                45px 0;
+
+            border-top:
+                1px solid var(--border);
+
+        }
+
+
+        .software-item:first-child {
+
+            border-top:
+                none;
+
+            padding-top:
+                10px;
+
+        }
+
+
+        .software-item:nth-child(even) {
+
+            direction:
+                rtl;
+
+        }
+
+
+        .software-item:nth-child(even) .software-content {
+
+            direction:
+                ltr;
+
+        }
+
+
+        .software-item:nth-child(even) .software-visual {
+
+            direction:
+                ltr;
+
+        }
+
+
+
+        /* =========================
+           SOFTWARE IMAGE
+        ========================= */
+
+        .software-visual {
+
+            width:
+                100%;
+
+            aspect-ratio:
+                16 / 10;
+
+            overflow:
+                hidden;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                10px;
+
+            background:
+                #edf1f3;
+
+            box-shadow:
+                0 8px 25px rgba(20,40,55,0.08);
+
+        }
+
+
+        .software-visual img {
+
+            width:
+                100%;
+
+            height:
+                100%;
+
+            object-fit:
+                cover;
+
+            display:
+                block;
+
+        }
+
+
+        .image-placeholder {
+
+            width:
+                100%;
+
+            height:
+                100%;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            text-align:
+                center;
+
+            padding:
+                30px;
+
+            color:
+                var(--muted);
+
+            font-size:
+                0.9rem;
+
+        }
+
+
+
+        /* =========================
+           SOFTWARE CONTENT
+        ========================= */
+
+        .software-name {
+
+            margin:
+                0 0 10px;
+
+            font-size:
+                2rem;
+
+            line-height:
+                1.2;
+
+            color:
+                var(--dark);
+
+            letter-spacing:
+                -0.025em;
+
+        }
+
+
+        .software-name span {
+
+            display:
+                inline-block;
+
+            margin-left:
+                8px;
+
+            padding:
+                4px 9px;
+
+            vertical-align:
+                middle;
+
+            border-radius:
+                5px;
+
+            background:
+                var(--light-accent);
+
+            color:
+                var(--accent);
+
+            font-size:
+                0.72rem;
+
+            font-weight:
+                700;
+
+            letter-spacing:
+                0;
+
+        }
+
+
+        .software-description {
+
+            margin:
+                0 0 20px;
+
+            color:
+                var(--text);
+
+            font-size:
+                1rem;
+
+        }
+
+
+        .features {
+
+            margin:
+                0 0 22px;
+
+            padding:
+                0;
+
+            list-style:
+                none;
+
+        }
+
+
+        .features li {
+
+            position:
+                relative;
+
+            padding-left:
+                22px;
+
+            margin:
+                8px 0;
+
+            color:
+                var(--muted);
+
+            font-size:
+                0.93rem;
+
+        }
+
+
+        .features li::before {
+
+            content:
+                "✓";
+
+            position:
+                absolute;
+
+            left:
+                0;
+
+            color:
+                var(--accent);
+
+            font-weight:
+                700;
+
+        }
+
+
+
+        /* =========================
+           TAGS
+        ========================= */
+
+        .tags {
+
+            margin:
+                0 0 20px;
+
+        }
+
+
+        .tag {
+
+            display:
+                inline-block;
+
+            margin:
+                3px 5px 3px 0;
+
+            padding:
+                4px 10px;
+
+            border-radius:
+                20px;
+
+            background:
+                var(--light-accent);
+
+            color:
+                var(--accent);
+
+            font-size:
+                0.75rem;
+
+            font-weight:
+                600;
+
+        }
+
+
+
+        /* =========================
+           BUTTONS
+        ========================= */
+
+        .software-links {
+
+            display:
+                flex;
+
+            flex-wrap:
+                wrap;
+
+            gap:
+                10px;
+
+        }
+
+
+        .button {
+
+            display:
+                inline-block;
+
+            padding:
+                9px 15px;
+
+            border-radius:
+                6px;
+
+            border:
+                1px solid var(--accent);
+
+            font-size:
+                0.88rem;
+
+            font-weight:
+                650;
+
+        }
+
+
+        .button-primary {
+
+            background:
+                var(--accent);
+
+            color:
+                white;
+
+        }
+
+
+        .button-secondary {
+
+            background:
+                white;
+
+            color:
+                var(--accent);
+
+        }
+
+
+        .button-primary:hover,
+        .button-secondary:hover {
+
+            text-decoration:
+                none;
+
+        }
+
+
+
+        /* =========================
+           GITHUB SECTION
+        ========================= */
+
+        .github-box {
+
+            padding:
+                40px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                12px;
+
+            background:
+                white;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                space-between;
+
+            gap:
+                30px;
+
+        }
+
+
+        .github-box h2 {
+
+            margin:
+                0 0 8px;
+
+            color:
+                var(--dark);
+
+        }
+
+
+        .github-box p {
+
+            margin:
+                0;
+
+            color:
+                var(--muted);
+
+        }
+
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+
+            padding:
+                30px 0;
+
+            border-top:
+                1px solid var(--border);
+
+            color:
+                var(--muted);
+
+            font-size:
+                0.9rem;
+
+        }
+
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 760px) {
+
+            .nav {
+
+                align-items:
+                    flex-start;
+
+                padding:
+                    14px 0;
+
+                gap:
+                    12px;
+
+            }
+
+
+            .nav-links {
+
+                gap:
+                    10px 16px;
+
+                flex-wrap:
+                    wrap;
+
+                justify-content:
+                    flex-end;
+
+            }
+
+
+            .page-hero {
+
+                padding:
+                    60px 0;
+
+            }
+
+
+            section {
+
+                padding:
+                    55px 0;
+
+            }
+
+
+            .software-item {
+
+                grid-template-columns:
+                    1fr;
+
+                gap:
+                    25px;
+
+                padding:
+                    40px 0;
+
+            }
+
+
+            .software-item:nth-child(even) {
+
+                direction:
+                    ltr;
+
+            }
+
+
+            .software-name {
+
+                font-size:
+                    1.7rem;
+
+            }
+
+
+            .github-box {
+
+                flex-direction:
+                    column;
+
+                align-items:
+                    flex-start;
+
+                padding:
+                    30px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<header>
+
+    <div class="container nav">
+
+        <a class="logo"
+           href="index.html">
+
+            BINBIN WU
+
+        </a>
+
+
+        <nav class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="research.html">
+                Research
+            </a>
+
+            <a href="publications.html">
+                Publications
+            </a>
+
+            <a href="software.html">
+                Software
+            </a>
+
+            <a href="teaching.html">
+                Teaching
+            </a>
+
+            <a href="cv.html">
+                CV
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<main>
+
+
+<!-- =========================
+     PAGE HERO
+========================= -->
+
+<section class="page-hero">
+
+    <div class="container">
+
+        <div class="eyebrow">
+
+            Open Science · Software · Quantitative Biology
+
+        </div>
+
+
+        <h1>
+
+            Open-source software
+
+        </h1>
+
+
+        <p class="page-lead">
+
+            I develop open-source software and computational
+            tools to make behavioral neuroscience research
+            more efficient, quantitative, reproducible, and
+            accessible.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     SOFTWARE PROJECTS
+========================= -->
+
+<section>
+
+    <div class="container">
+
+        <h2 class="section-title">
+
+            Software projects
+
+        </h2>
+
+
+        <p class="section-intro">
+
+            These tools support behavioral tracking,
+            sleep analysis, circadian rhythm analysis,
+            and quantitative investigation of animal behavior.
+
+        </p>
+
+
+        <div class="software-list">
+
+
+
+            <!-- =====================
+                 sociSleep
+            ====================== -->
+
+            <article class="software-item">
+
+
+                <div class="software-visual">
+
+                    <!--
+                    Replace this with your actual
+                    sociSleep screenshot or GIF.
+
+                    Example:
+
+                    <img
+                        src="assets/sociSleep_autoGif.gif"
+                        alt="sociSleep software interface">
+                    -->
+
+                    <div class="image-placeholder">
+
+                        <div>
+
+                            <strong>sociSleep</strong>
+
+                            <br><br>
+
+                            Add your sociSleep
+                            screenshot or GIF here.
+
+                            <br>
+
+                            Recommended:
+                            16:10 image or GIF
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="software-content">
+
+
+                    <h3 class="software-name">
+
+                        sociSleep
+
+                        <span>
+                            Python
+                        </span>
+
+                    </h3>
+
+
+                    <p class="software-description">
+
+                        An identity-preserving tracking and
+                        analysis system for quantifying sleep,
+                        locomotion, and social interactions in
+                        groups of <em>Drosophila</em>.
+
+                    </p>
+
+
+                    <ul class="features">
+
+                        <li>
+                            Individual-level sleep analysis
+                            in social groups
+                        </li>
+
+                        <li>
+                            Quantification of social proximity
+                            and co-movement
+                        </li>
+
+                        <li>
+                            Automated behavioral tracking
+                            and identity preservation
+                        </li>
+
+                        <li>
+                            Integrated visualization and
+                            quantitative analysis
+                        </li>
+
+                    </ul>
+
+
+                    <div class="tags">
+
+                        <span class="tag">
+                            Python
+                        </span>
+
+                        <span class="tag">
+                            Behavioral tracking
+                        </span>
+
+                        <span class="tag">
+                            Sleep
+                        </span>
+
+                        <span class="tag">
+                            Social behavior
+                        </span>
+
+                        <span class="tag">
+                            Open source
+                        </span>
+
+                    </div>
+
+
+                    <div class="software-links">
+
+                        <a
+                            class="button button-primary"
+                            href="https://github.com/Dr-WUBINBIN"
+                            target="_blank"
+                            rel="noopener">
+
+                            View on GitHub →
+
+                        </a>
+
+
+                        <!-- Add documentation link later -->
+
+                        <!--
+                        <a
+                            class="button button-secondary"
+                            href="YOUR_DOCUMENTATION_URL"
+                            target="_blank"
+                            rel="noopener">
+
+                            Documentation
+
+                        </a>
+                        -->
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =====================
+                 easyClock
+            ====================== -->
+
+            <article class="software-item">
+
+
+                <div class="software-visual">
+
+                    <!--
+                    Replace this with your actual
+                    easyClock screenshot or GIF.
+
+                    Example:
+
+                    <img
+                        src="assets/easyclock_demo.gif"
+                        alt="easyClock software interface">
+                    -->
+
+                    <div class="image-placeholder">
+
+                        <div>
+
+                            <strong>easyClock</strong>
+
+                            <br><br>
+
+                            Add your easyClock
+                            screenshot or GIF here.
+
+                            <br>
+
+                            Recommended:
+                            16:10 image or GIF
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="software-content">
+
+
+                    <h3 class="software-name">
+
+                        easyClock
+
+                        <span>
+                            Python
+                        </span>
+
+                    </h3>
+
+
+                    <p class="software-description">
+
+                        A user-friendly computational tool for
+                        analyzing, visualizing, and interpreting
+                        circadian behavioral rhythms.
+
+                    </p>
+
+
+                    <ul class="features">
+
+                        <li>
+                            Actogram and rhythm visualization
+                        </li>
+
+                        <li>
+                            Circadian period and phase analysis
+                        </li>
+
+                        <li>
+                            Support for common rhythmicity
+                            analysis workflows
+                        </li>
+
+                        <li>
+                            Graphical user interface designed
+                            for accessibility
+                        </li>
+
+                    </ul>
+
+
+                    <div class="tags">
+
+                        <span class="tag">
+                            Python
+                        </span>
+
+                        <span class="tag">
+                            Circadian biology
+                        </span>
+
+                        <span class="tag">
+                            GUI
+                        </span>
+
+                        <span class="tag">
+                            Data visualization
+                        </span>
+
+                    </div>
+
+
+                    <div class="software-links">
+
+                        <a
+                            class="button button-primary"
+                            href="https://github.com/Dr-WUBINBIN"
+                            target="_blank"
+                            rel="noopener">
+
+                            View on GitHub →
+
+                        </a>
+
+
+                        <!--
+                        <a
+                            class="button button-secondary"
+                            href="YOUR_DOCUMENTATION_URL"
+                            target="_blank"
+                            rel="noopener">
+
+                            Documentation
+
+                        </a>
+                        -->
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =====================
+                 SOFTWARE 3
+            ====================== -->
+
+            <article class="software-item">
+
+
+                <div class="software-visual">
+
+                    <div class="image-placeholder">
+
+                        <div>
+
+                            <strong>
+                                Your next software
+                            </strong>
+
+                            <br><br>
+
+                            Add a screenshot or GIF here.
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="software-content">
+
+
+                    <h3 class="software-name">
+
+                        [Software name]
+
+                        <span>
+                            Python
+                        </span>
+
+                    </h3>
+
+
+                    <p class="software-description">
+
+                        Add a concise description of another
+                        open-source tool, analysis pipeline,
+                        or computational resource here.
+
+                    </p>
+
+
+                    <ul class="features">
+
+                        <li>
+                            Add the main capability
+                        </li>
+
+                        <li>
+                            Add the main analysis feature
+                        </li>
+
+                        <li>
+                            Add the main visualization feature
+                        </li>
+
+                    </ul>
+
+
+                    <div class="tags">
+
+                        <span class="tag">
+                            Python
+                        </span>
+
+                        <span class="tag">
+                            Quantitative biology
+                        </span>
+
+                        <span class="tag">
+                            Open source
+                        </span>
+
+                    </div>
+
+
+                    <div class="software-links">
+
+                        <a
+                            class="button button-primary"
+                            href="https://github.com/Dr-WUBINBIN"
+                            target="_blank"
+                            rel="noopener">
+
+                            View on GitHub →
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =====================
+                 SOFTWARE 4
+            ====================== -->
+
+            <article class="software-item">
+
+
+                <div class="software-visual">
+
+                    <div class="image-placeholder">
+
+                        <div>
+
+                            <strong>
+                                Your next software
+                            </strong>
+
+                            <br><br>
+
+                            Add a screenshot or GIF here.
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="software-content">
+
+
+                    <h3 class="software-name">
+
+                        [Software name]
+
+                        <span>
+                            Python
+                        </span>
+
+                    </h3>
+
+
+                    <p class="software-description">
+
+                        Add another computational tool,
+                        analysis pipeline, or behavioral
+                        quantification resource here.
+
+                    </p>
+
+
+                    <ul class="features">
+
+                        <li>
+                            Add the main capability
+                        </li>
+
+                        <li>
+                            Add the main analysis feature
+                        </li>
+
+                        <li>
+                            Add the main visualization feature
+                        </li>
+
+                    </ul>
+
+
+                    <div class="tags">
+
+                        <span class="tag">
+                            Python
+                        </span>
+
+                        <span class="tag">
+                            Behavior
+                        </span>
+
+                        <span class="tag">
+                            Open source
+                        </span>
+
+                    </div>
+
+
+                    <div class="software-links">
+
+                        <a
+                            class="button button-primary"
+                            href="https://github.com/Dr-WUBINBIN"
+                            target="_blank"
+                            rel="noopener">
+
+                            View on GitHub →
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     GITHUB
+========================= -->
+
+<section class="section-light">
+
+    <div class="container">
+
+        <div class="github-box">
+
+
+            <div>
+
+                <h2>
+
+                    Explore all repositories
+
+                </h2>
+
+
+                <p>
+
+                    Find all of my open-source projects,
+                    analysis tools, and computational resources
+                    on GitHub.
+
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <a
+                    class="button button-primary"
+                    href="https://github.com/Dr-WUBINBIN"
+                    target="_blank"
+                    rel="noopener">
+
+                    View all on GitHub →
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="container">
+
+        <strong>
+            Binbin Wu
+        </strong>
+
+        · Behavioral Neuroscience · Genetics · Quantitative Biology
+
+        <br>
+
+        © 2026 Binbin Wu
+
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>
