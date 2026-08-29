@@ -1,0 +1,1642 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Binbin Wu - Research mentoring, quantitative training, scientific development, and undergraduate and graduate mentorship.">
+
+    <title>Mentoring | Binbin Wu</title>
+
+
+    <style>
+
+        :root {
+
+            --dark: #17212b;
+            --text: #34424d;
+            --muted: #687680;
+
+            --accent: #245b78;
+            --light-accent: #edf4f7;
+
+            --background: #ffffff;
+            --light: #f6f8f9;
+
+            --border: #dfe5e8;
+
+            --max-width: 1100px;
+
+        }
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            margin: 0;
+
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Helvetica,
+                Arial,
+                sans-serif;
+
+            color: var(--text);
+
+            background: var(--background);
+
+            line-height: 1.7;
+
+        }
+
+
+        a {
+
+            color: var(--accent);
+
+            text-decoration: none;
+
+        }
+
+
+        a:hover {
+
+            text-decoration: underline;
+
+        }
+
+
+        .container {
+
+            width:
+                min(92%, var(--max-width));
+
+            margin:
+                auto;
+
+        }
+
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        header {
+
+            position:
+                sticky;
+
+            top:
+                0;
+
+            z-index:
+                100;
+
+            background:
+                rgba(255, 255, 255, 0.96);
+
+            border-bottom:
+                1px solid var(--border);
+
+            backdrop-filter:
+                blur(8px);
+
+        }
+
+
+        .nav {
+
+            min-height:
+                70px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                space-between;
+
+        }
+
+
+        .logo {
+
+            font-size:
+                1.05rem;
+
+            font-weight:
+                750;
+
+            letter-spacing:
+                0.08em;
+
+            color:
+                var(--dark);
+
+        }
+
+
+        .nav-links {
+
+            display:
+                flex;
+
+            gap:
+                28px;
+
+        }
+
+
+        .nav-links a {
+
+            color:
+                var(--muted);
+
+            font-size:
+                0.95rem;
+
+        }
+
+
+        .nav-links a:hover {
+
+            color:
+                var(--accent);
+
+            text-decoration:
+                none;
+
+        }
+
+
+
+        /* =========================
+           PAGE HERO
+        ========================= */
+
+        .page-hero {
+
+            padding:
+                90px 0 75px;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    #f6f8f9 0%,
+                    #ffffff 100%
+                );
+
+            border-bottom:
+                1px solid var(--border);
+
+        }
+
+
+        .eyebrow {
+
+            color:
+                var(--accent);
+
+            text-transform:
+                uppercase;
+
+            letter-spacing:
+                0.16em;
+
+            font-size:
+                0.78rem;
+
+            font-weight:
+                700;
+
+        }
+
+
+        h1 {
+
+            margin:
+                12px 0 20px;
+
+            font-size:
+                clamp(2.8rem, 6vw, 4.8rem);
+
+            line-height:
+                1.03;
+
+            letter-spacing:
+                -0.05em;
+
+            color:
+                var(--dark);
+
+        }
+
+
+        .page-lead {
+
+            max-width:
+                800px;
+
+            font-size:
+                1.2rem;
+
+            line-height:
+                1.8;
+
+            color:
+                var(--text);
+
+            margin:
+                0;
+
+        }
+
+
+
+        /* =========================
+           GENERAL SECTIONS
+        ========================= */
+
+        section {
+
+            padding:
+                75px 0;
+
+        }
+
+
+        .section-light {
+
+            background:
+                var(--light);
+
+        }
+
+
+        .section-title {
+
+            margin:
+                0 0 12px;
+
+            font-size:
+                2.1rem;
+
+            letter-spacing:
+                -0.025em;
+
+            color:
+                var(--dark);
+
+        }
+
+
+        .section-intro {
+
+            max-width:
+                760px;
+
+            margin:
+                0 0 40px;
+
+            color:
+                var(--muted);
+
+        }
+
+
+
+        /* =========================
+           MENTORING INTRO
+        ========================= */
+
+        .intro-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1.25fr 0.75fr;
+
+            gap:
+                60px;
+
+            align-items:
+                center;
+
+        }
+
+
+        .intro-text {
+
+            font-size:
+                1.05rem;
+
+            color:
+                var(--text);
+
+        }
+
+
+        .intro-text p:first-child {
+
+            margin-top:
+                0;
+
+        }
+
+
+        .intro-image {
+
+            width:
+                100%;
+
+            aspect-ratio:
+                4 / 3;
+
+            border-radius:
+                12px;
+
+            overflow:
+                hidden;
+
+            border:
+                1px solid var(--border);
+
+            background:
+                #edf1f3;
+
+            box-shadow:
+                0 10px 30px rgba(20,40,55,0.08);
+
+        }
+
+
+        .intro-image img {
+
+            width:
+                100%;
+
+            height:
+                100%;
+
+            object-fit:
+                cover;
+
+            display:
+                block;
+
+        }
+
+
+        .image-placeholder {
+
+            width:
+                100%;
+
+            height:
+                100%;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            text-align:
+                center;
+
+            padding:
+                30px;
+
+            color:
+                var(--muted);
+
+            font-size:
+                0.9rem;
+
+        }
+
+
+
+        /* =========================
+           MENTORING PRINCIPLES
+        ========================= */
+
+        .principles-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap:
+                20px;
+
+        }
+
+
+        .principle-card {
+
+            padding:
+                30px;
+
+            background:
+                white;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                10px;
+
+        }
+
+
+        .principle-number {
+
+            color:
+                var(--accent);
+
+            font-size:
+                0.78rem;
+
+            font-weight:
+                700;
+
+            letter-spacing:
+                0.1em;
+
+        }
+
+
+        .principle-card h3 {
+
+            margin:
+                8px 0 12px;
+
+            color:
+                var(--dark);
+
+            font-size:
+                1.2rem;
+
+        }
+
+
+        .principle-card p {
+
+            margin:
+                0;
+
+            color:
+                var(--muted);
+
+        }
+
+
+
+        /* =========================
+           IMAGE + TEXT FEATURE
+        ========================= */
+
+        .feature {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap:
+                55px;
+
+            align-items:
+                center;
+
+            padding:
+                55px 0;
+
+            border-top:
+                1px solid var(--border);
+
+        }
+
+
+        .feature:first-child {
+
+            border-top:
+                none;
+
+        }
+
+
+        .feature.reverse {
+
+            direction:
+                rtl;
+
+        }
+
+
+        .feature.reverse .feature-content,
+        .feature.reverse .feature-image {
+
+            direction:
+                ltr;
+
+        }
+
+
+        .feature-image {
+
+            width:
+                100%;
+
+            aspect-ratio:
+                16 / 10;
+
+            overflow:
+                hidden;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                10px;
+
+            background:
+                #edf1f3;
+
+            box-shadow:
+                0 8px 25px rgba(20,40,55,0.07);
+
+        }
+
+
+        .feature-image img {
+
+            width:
+                100%;
+
+            height:
+                100%;
+
+            object-fit:
+                cover;
+
+            display:
+                block;
+
+        }
+
+
+        .feature-content h3 {
+
+            margin:
+                0 0 12px;
+
+            font-size:
+                1.6rem;
+
+            color:
+                var(--dark);
+
+        }
+
+
+        .feature-content p {
+
+            color:
+                var(--text);
+
+        }
+
+
+
+        /* =========================
+           MENTORING LIST
+        ========================= */
+
+        .mentoring-list {
+
+            list-style:
+                none;
+
+            padding:
+                0;
+
+            margin:
+                25px 0 0;
+
+        }
+
+
+        .mentoring-list li {
+
+            position:
+                relative;
+
+            padding:
+                8px 0 8px 25px;
+
+            color:
+                var(--muted);
+
+        }
+
+
+        .mentoring-list li::before {
+
+            content:
+                "✓";
+
+            position:
+                absolute;
+
+            left:
+                0;
+
+            color:
+                var(--accent);
+
+            font-weight:
+                700;
+
+        }
+
+
+
+        /* =========================
+           MENTORING PHILOSOPHY
+        ========================= */
+
+        .philosophy {
+
+            max-width:
+                850px;
+
+            margin:
+                auto;
+
+            text-align:
+                center;
+
+        }
+
+
+        .philosophy p {
+
+            font-size:
+                1.15rem;
+
+            line-height:
+                1.9;
+
+            color:
+                var(--text);
+
+        }
+
+
+        .philosophy strong {
+
+            color:
+                var(--dark);
+
+        }
+
+
+
+        /* =========================
+           CTA
+        ========================= */
+
+        .cta {
+
+            padding:
+                40px;
+
+            background:
+                white;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                12px;
+
+            text-align:
+                center;
+
+        }
+
+
+        .cta h2 {
+
+            margin:
+                0 0 10px;
+
+            color:
+                var(--dark);
+
+        }
+
+
+        .cta p {
+
+            max-width:
+                700px;
+
+            margin:
+                0 auto 25px;
+
+            color:
+                var(--muted);
+
+        }
+
+
+        .button {
+
+            display:
+                inline-block;
+
+            padding:
+                10px 18px;
+
+            border-radius:
+                6px;
+
+            border:
+                1px solid var(--accent);
+
+            font-size:
+                0.92rem;
+
+            font-weight:
+                650;
+
+        }
+
+
+        .button-primary {
+
+            background:
+                var(--accent);
+
+            color:
+                white;
+
+        }
+
+
+        .button-primary:hover {
+
+            text-decoration:
+                none;
+
+        }
+
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+
+            padding:
+                30px 0;
+
+            border-top:
+                1px solid var(--border);
+
+            color:
+                var(--muted);
+
+            font-size:
+                0.9rem;
+
+        }
+
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 760px) {
+
+            .nav {
+
+                align-items:
+                    flex-start;
+
+                padding:
+                    14px 0;
+
+                gap:
+                    12px;
+
+            }
+
+
+            .nav-links {
+
+                gap:
+                    10px 16px;
+
+                flex-wrap:
+                    wrap;
+
+                justify-content:
+                    flex-end;
+
+            }
+
+
+            .page-hero {
+
+                padding:
+                    60px 0;
+
+            }
+
+
+            section {
+
+                padding:
+                    55px 0;
+
+            }
+
+
+            .intro-grid {
+
+                grid-template-columns:
+                    1fr;
+
+                gap:
+                    30px;
+
+            }
+
+
+            .principles-grid {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .feature {
+
+                grid-template-columns:
+                    1fr;
+
+                gap:
+                    25px;
+
+                padding:
+                    40px 0;
+
+            }
+
+
+            .feature.reverse {
+
+                direction:
+                    ltr;
+
+            }
+
+
+            .cta {
+
+                padding:
+                    30px 22px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<header>
+
+    <div class="container nav">
+
+        <a class="logo"
+           href="index.html">
+
+            BINBIN WU
+
+        </a>
+
+
+        <nav class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="research.html">
+                Research
+            </a>
+
+            <a href="publications.html">
+                Publications
+            </a>
+
+            <a href="software.html">
+                Software
+            </a>
+
+            <a href="mentoring.html">
+                Mentoring
+            </a>
+
+            <a href="news.html">
+                News
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<main>
+
+
+<!-- =========================
+     PAGE HERO
+========================= -->
+
+<section class="page-hero">
+
+    <div class="container">
+
+        <div class="eyebrow">
+
+            Mentoring · Research Training · Scientific Development
+
+        </div>
+
+
+        <h1>
+
+            Mentoring
+
+        </h1>
+
+
+        <p class="page-lead">
+
+            I mentor students through hands-on research,
+            quantitative training, critical thinking, and
+            the development of independence as scientists.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     INTRODUCTION
+========================= -->
+
+<section>
+
+    <div class="container intro-grid">
+
+
+        <div class="intro-text">
+
+            <h2 class="section-title">
+
+                Developing independent scientists
+
+            </h2>
+
+
+            <p>
+
+                My approach to mentoring is centered on
+                helping students become increasingly
+                independent researchers. I believe that
+                students learn science most effectively
+                by actively participating in the process
+                of asking questions, designing experiments,
+                analyzing data, and communicating their
+                findings.
+
+            </p>
+
+
+            <p>
+
+                Rather than providing a predefined path for
+                every experiment, I encourage students to
+                develop their own scientific reasoning while
+                providing guidance when they encounter
+                technical or conceptual challenges.
+
+            </p>
+
+
+            <p>
+
+                My goal is for students to eventually move
+                from following experimental instructions to
+                <strong>asking their own questions and
+                designing their own approaches</strong>.
+
+            </p>
+
+        </div>
+
+
+
+        <!--
+        Replace the placeholder below with a real
+        mentoring/lab photograph later.
+
+        Example:
+
+        <img
+            src="assets/mentoring.jpg"
+            alt="Binbin Wu mentoring students">
+        -->
+
+        <div class="intro-image">
+
+            <div class="image-placeholder">
+
+                <div>
+
+                    <strong>
+                        Mentoring / laboratory photo
+                    </strong>
+
+                    <br><br>
+
+                    Add a photograph here.
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     THREE PRINCIPLES
+========================= -->
+
+<section class="section-light">
+
+    <div class="container">
+
+        <h2 class="section-title">
+
+            Mentoring principles
+
+        </h2>
+
+
+        <p class="section-intro">
+
+            I emphasize three complementary aspects of
+            research training.
+
+        </p>
+
+
+        <div class="principles-grid">
+
+
+            <article class="principle-card">
+
+                <div class="principle-number">
+                    01
+                </div>
+
+
+                <h3>
+                    Learn by doing
+                </h3>
+
+
+                <p>
+
+                    Students gain practical experience through
+                    hands-on experiments, behavioral assays,
+                    data collection, and iterative troubleshooting.
+
+                </p>
+
+            </article>
+
+
+
+            <article class="principle-card">
+
+                <div class="principle-number">
+                    02
+                </div>
+
+
+                <h3>
+                    Think quantitatively
+                </h3>
+
+
+                <p>
+
+                    I encourage students to use quantitative
+                    approaches to analyze behavior, visualize
+                    data, test hypotheses, and interpret
+                    unexpected results.
+
+                </p>
+
+            </article>
+
+
+
+            <article class="principle-card">
+
+                <div class="principle-number">
+                    03
+                </div>
+
+
+                <h3>
+                    Build independence
+                </h3>
+
+
+                <p>
+
+                    Students gradually take ownership of
+                    experiments, analysis, literature searches,
+                    scientific presentations, and research
+                    questions.
+
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     RESEARCH TRAINING
+========================= -->
+
+<section>
+
+    <div class="container">
+
+        <h2 class="section-title">
+
+            Research training
+
+        </h2>
+
+
+        <p class="section-intro">
+
+            Research training can combine experimental
+            biology, behavioral neuroscience, genetics,
+            and computational approaches.
+
+        </p>
+
+
+
+        <!-- =====================
+             FEATURE 1
+        ====================== -->
+
+        <div class="feature">
+
+
+            <!--
+            Replace with:
+
+            assets/lab-mentoring.jpg
+            -->
+
+            <div class="feature-image">
+
+                <div class="image-placeholder">
+
+                    <div>
+
+                        <strong>
+                            Experimental research
+                        </strong>
+
+                        <br><br>
+
+                        Add a laboratory or
+                        behavioral experiment photo.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="feature-content">
+
+                <h3>
+
+                    Hands-on experimental research
+
+                </h3>
+
+
+                <p>
+
+                    Students can develop practical experience
+                    with behavioral experiments, Drosophila
+                    genetics, neuronal approaches, experimental
+                    design, and quantitative behavioral assays.
+
+                </p>
+
+
+                <ul class="mentoring-list">
+
+                    <li>
+                        Experimental design and controls
+                    </li>
+
+                    <li>
+                        Behavioral observation and measurement
+                    </li>
+
+                    <li>
+                        Genetics and experimental manipulation
+                    </li>
+
+                    <li>
+                        Troubleshooting experimental problems
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =====================
+             FEATURE 2
+        ====================== -->
+
+        <div class="feature reverse">
+
+
+            <!--
+            Replace with:
+
+            assets/data-analysis.jpg
+            -->
+
+            <div class="feature-image">
+
+                <div class="image-placeholder">
+
+                    <div>
+
+                        <strong>
+                            Quantitative analysis
+                        </strong>
+
+                        <br><br>
+
+                        Add a screenshot of
+                        data analysis or coding.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="feature-content">
+
+                <h3>
+
+                    Quantitative and computational training
+
+                </h3>
+
+
+                <p>
+
+                    I encourage students to develop computational
+                    skills that allow them to move beyond
+                    qualitative observations and extract
+                    quantitative information from behavioral
+                    experiments.
+
+                </p>
+
+
+                <ul class="mentoring-list">
+
+                    <li>
+                        Python-based data analysis
+                    </li>
+
+                    <li>
+                        Data visualization and interpretation
+                    </li>
+
+                    <li>
+                        Behavioral tracking and analysis
+                    </li>
+
+                    <li>
+                        Reproducible computational workflows
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =====================
+             FEATURE 3
+        ====================== -->
+
+        <div class="feature">
+
+
+            <!--
+            Replace with:
+
+            assets/research-presentation.jpg
+            -->
+
+            <div class="feature-image">
+
+                <div class="image-placeholder">
+
+                    <div>
+
+                        <strong>
+                            Scientific communication
+                        </strong>
+
+                        <br><br>
+
+                        Add a research presentation
+                        or conference photograph.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="feature-content">
+
+                <h3>
+
+                    Scientific communication
+
+                </h3>
+
+
+                <p>
+
+                    An important part of research training is
+                    learning how to communicate scientific
+                    findings clearly. I encourage students
+                    to discuss their results, question
+                    unexpected observations, and present
+                    their work to different audiences.
+
+                </p>
+
+
+                <ul class="mentoring-list">
+
+                    <li>
+                        Reading and discussing scientific literature
+                    </li>
+
+                    <li>
+                        Interpreting anomalous or unexpected data
+                    </li>
+
+                    <li>
+                        Preparing figures and presentations
+                    </li>
+
+                    <li>
+                        Developing clear scientific writing
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PHILOSOPHY
+========================= -->
+
+<section class="section-light">
+
+    <div class="container">
+
+        <div class="philosophy">
+
+            <h2 class="section-title">
+
+                From guidance to independence
+
+            </h2>
+
+
+            <p>
+
+                Effective mentoring is not simply about
+                teaching students how to perform experiments.
+                It is about helping them develop the ability
+                to <strong>identify problems, evaluate
+                evidence, make decisions, and pursue
+                scientific questions independently.</strong>
+
+            </p>
+
+
+            <p>
+
+                I aim to create a research environment in
+                which students feel comfortable asking
+                questions, discussing unexpected results,
+                learning unfamiliar tools, and gradually
+                taking ownership of their research.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FUTURE STUDENT OPPORTUNITIES
+========================= -->
+
+<section>
+
+    <div class="container">
+
+        <div class="cta">
+
+            <h2>
+
+                Research opportunities
+
+            </h2>
+
+
+            <p>
+
+                As I establish an independent research program,
+                I look forward to mentoring undergraduate,
+                graduate, and postdoctoral researchers interested
+                in behavioral neuroscience, genetics, social
+                behavior, sleep, feeding, circadian biology,
+                and quantitative approaches to animal behavior.
+
+            </p>
+
+
+            <a
+                class="button button-primary"
+                href="research.html">
+
+                Explore my research →
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="container">
+
+        <strong>
+            Binbin Wu
+        </strong>
+
+        · Behavioral Neuroscience · Genetics · Quantitative Biology
+
+        <br>
+
+        © 2026 Binbin Wu
+
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>
