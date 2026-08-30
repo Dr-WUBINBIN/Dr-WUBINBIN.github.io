@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Binbin Wu - News and updates on research, publications, software, presentations, and academic activities.">
+
+    <title>News | Binbin Wu</title>
+
+
+    <style>
+
+        :root {
+
+            --dark: #17212b;
+            --text: #34424d;
+            --muted: #687680;
+
+            --accent: #245b78;
+            --light-accent: #edf4f7;
+
+            --background: #ffffff;
+            --light: #f6f8f9;
+
+            --border: #dfe5e8;
+
+            --max-width: 900px;
+
+        }
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            margin: 0;
+
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Helvetica,
+                Arial,
+                sans-serif;
+
+            color: var(--text);
+
+            background: var(--background);
+
+            line-height: 1.7;
+
+        }
+
+
+        a {
+
+            color: var(--accent);
+
+            text-decoration: none;
+
+        }
+
+
+        a:hover {
+
+            text-decoration: underline;
+
+        }
+
+
+        .container {
+
+            width:
+                min(92%, var(--max-width));
+
+            margin:
+                auto;
+
+        }
+
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        header {
+
+            position:
+                sticky;
+
+            top:
+                0;
+
+            z-index:
+                100;
+
+            background:
+                rgba(255, 255, 255, 0.96);
+
+            border-bottom:
+                1px solid var(--border);
+
+            backdrop-filter:
+                blur(8px);
+
+        }
+
+
+        .nav {
+
+            min-height:
+                70px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                space-between;
+
+        }
+
+
+        .logo {
+
+            font-size:
+                1.05rem;
+
+            font-weight:
+                750;
+
+            letter-spacing:
+                0.08em;
+
+            color:
+                var(--dark);
+
+        }
+
+
+        .nav-links {
+
+            display:
+                flex;
+
+            gap:
+                28px;
+
+        }
+
+
+        .nav-links a {
+
+            color:
+                var(--muted);
+
+            font-size:
+                0.95rem;
+
+        }
+
+
+        .nav-links a:hover {
+
+            color:
+                var(--accent);
+
+            text-decoration:
+                none;
+
+        }
+
+
+
+        /* =========================
+           PAGE HEADER
+        ========================= */
+
+        .page-hero {
+
+            padding:
+                85px 0 65px;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    #f6f8f9 0%,
+                    #ffffff 100%
+                );
+
+            border-bottom:
+                1px solid var(--border);
+
+        }
+
+
+        .eyebrow {
+
+            color:
+                var(--accent);
+
+            text-transform:
+                uppercase;
+
+            letter-spacing:
+                0.16em;
+
+            font-size:
+                0.78rem;
+
+            font-weight:
+                700;
+
+        }
+
+
+        h1 {
+
+            margin:
+                12px 0 18px;
+
+            font-size:
+                clamp(2.8rem, 6vw, 4.8rem);
+
+            line-height:
+                1.03;
+
+            letter-spacing:
+                -0.05em;
+
+            color:
+                var(--dark);
+
+        }
+
+
+        .page-lead {
+
+            max-width:
+                700px;
+
+            margin:
+                0;
+
+            font-size:
+                1.15rem;
+
+            color:
+                var(--muted);
+
+        }
+
+
+
+        /* =========================
+           NEWS
+        ========================= */
+
+        .news-section {
+
+            padding:
+                70px 0 90px;
+
+        }
+
+
+        .news-list {
+
+            border-top:
+                1px solid var(--border);
+
+        }
+
+
+        .news-item {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                120px 1fr;
+
+            gap:
+                30px;
+
+            padding:
+                30px 0;
+
+            border-bottom:
+                1px solid var(--border);
+
+        }
+
+
+        .news-date {
+
+            color:
+                var(--accent);
+
+            font-size:
+                0.88rem;
+
+            font-weight:
+                700;
+
+            line-height:
+                1.5;
+
+        }
+
+
+        .news-content h2 {
+
+            margin:
+                0 0 7px;
+
+            font-size:
+                1.15rem;
+
+            line-height:
+                1.5;
+
+            color:
+                var(--dark);
+
+        }
+
+
+        .news-content p {
+
+            margin:
+                0;
+
+            color:
+                var(--muted);
+
+        }
+
+
+        .news-content a {
+
+            display:
+                inline-block;
+
+            margin-top:
+                8px;
+
+            font-size:
+                0.9rem;
+
+            font-weight:
+                650;
+
+        }
+
+
+
+        /* =========================
+           NEWS TAG
+        ========================= */
+
+        .news-tag {
+
+            display:
+                inline-block;
+
+            margin-top:
+                8px;
+
+            padding:
+                3px 8px;
+
+            border-radius:
+                20px;
+
+            background:
+                var(--light-accent);
+
+            color:
+                var(--accent);
+
+            font-size:
+                0.7rem;
+
+            font-weight:
+                700;
+
+            text-transform:
+                uppercase;
+
+            letter-spacing:
+                0.04em;
+
+        }
+
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+
+            padding:
+                30px 0;
+
+            border-top:
+                1px solid var(--border);
+
+            color:
+                var(--muted);
+
+            font-size:
+                0.9rem;
+
+        }
+
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 760px) {
+
+            .nav {
+
+                align-items:
+                    flex-start;
+
+                padding:
+                    14px 0;
+
+                gap:
+                    12px;
+
+            }
+
+
+            .nav-links {
+
+                gap:
+                    10px 16px;
+
+                flex-wrap:
+                    wrap;
+
+                justify-content:
+                    flex-end;
+
+            }
+
+
+            .page-hero {
+
+                padding:
+                    60px 0;
+
+            }
+
+
+            .news-section {
+
+                padding:
+                    55px 0 70px;
+
+            }
+
+
+            .news-item {
+
+                grid-template-columns:
+                    1fr;
+
+                gap:
+                    5px;
+
+                padding:
+                    25px 0;
+
+            }
+
+
+            .news-date {
+
+                font-size:
+                    0.82rem;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<header>
+
+    <div class="container nav">
+
+        <a class="logo"
+           href="index.html">
+
+            BINBIN WU
+
+        </a>
+
+
+        <nav class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="research.html">
+                Research
+            </a>
+
+            <a href="publications.html">
+                Publications
+            </a>
+
+            <a href="software.html">
+                Software
+            </a>
+
+            <a href="mentoring.html">
+                Mentoring
+            </a>
+
+            <a href="news.html">
+                News
+            </a>
+
+            <a href="cv.html">
+                CV
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<main>
+
+
+<!-- =========================
+     PAGE HEADER
+========================= -->
+
+<section class="page-hero">
+
+    <div class="container">
+
+        <div class="eyebrow">
+
+            Updates · Research · Academic Activities
+
+        </div>
+
+
+        <h1>
+
+            News
+
+        </h1>
+
+
+        <p class="page-lead">
+
+            Occasional updates about my research,
+            publications, software, presentations,
+            and other academic activities.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     NEWS LIST
+========================= -->
+
+<section class="news-section">
+
+    <div class="container">
+
+        <div class="news-list">
+
+
+            <!-- =====================
+                 NEWS ITEM 1
+            ====================== -->
+
+            <article class="news-item">
+
+
+                <div class="news-date">
+
+                    August 2026
+
+                </div>
+
+
+                <div class="news-content">
+
+                    <h2>
+
+                        New preprint on social experience
+                        and sleep in <em>Drosophila</em>
+
+                    </h2>
+
+
+                    <span class="news-tag">
+
+                        Publication
+
+                    </span>
+
+
+                    <p>
+
+                        Our new preprint examines how recent
+                        social loss influences sleep and
+                        compares this effect with chronic
+                        social isolation.
+
+                    </p>
+
+
+                    <a href="publications.html">
+
+                        Read the publication →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =====================
+                 NEWS ITEM 2
+            ====================== -->
+
+            <article class="news-item">
+
+
+                <div class="news-date">
+
+                    August 2026
+
+                </div>
+
+
+                <div class="news-content">
+
+                    <h2>
+
+                        New open-source behavioral analysis
+                        tools are now available
+
+                    </h2>
+
+
+                    <span class="news-tag">
+
+                        Software
+
+                    </span>
+
+
+                    <p>
+
+                        I am developing open-source tools
+                        for quantitative behavioral analysis,
+                        including sociSleep and easyClock.
+
+                    </p>
+
+
+                    <a href="software.html">
+
+                        Explore the software →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            
+
+
+
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="container">
+
+        <strong>
+            Binbin Wu
+        </strong>
+
+        · Behavioral Neuroscience · Genetics · Quantitative Biology
+
+        <br>
+
+        © 2026 Binbin Wu
+
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>
